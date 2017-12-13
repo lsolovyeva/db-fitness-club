@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane fx:id="mainTabs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.unn.db.fitnessclub.MainForm">
+    <tabs>
+        <Tab onClosed="#tabs_OnSelectionChanged" text="Clients">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="clientTable" layoutX="14.0" layoutY="14.0" prefHeight="291.0" prefWidth="573.0" />
+                        <Button layoutX="14.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonAddClient_OnAction" text="Add" />
+                        <Button layoutX="64.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonDeleteClient_OnAction" text="Delete" />
+                  <Button layoutX="133.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonAddNewClientCard_OnAction" text="Add New Card" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab onClosed="#tabs_OnSelectionChanged" text="Cards">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="cardTable" layoutX="14.0" layoutY="14.0" prefHeight="291.0" prefWidth="573.0" />
+                        <Button layoutX="57.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonDeleteCard_OnAction" text="Delete" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Trainers">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="64.0" layoutY="326.0" mnemonicParsing="false" onAction="#buttonDeleteTrainer_OnAction" text="Delete" />
+                  <Button layoutX="14.0" layoutY="326.0" mnemonicParsing="false" onAction="#buttonAddTrainer_OnAction" text="Add" />
+                  <TableView fx:id="trainerTable" layoutX="14.0" layoutY="14.0" prefHeight="291.0" prefWidth="573.0" />
+               </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Schedule">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="exerciseTable" layoutX="14.0" layoutY="14.0" prefHeight="291.0" prefWidth="573.0" />
+                  <Button layoutX="20.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonAddExercise_OnAction" text="Add" />
+                  <Button layoutX="71.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonDeleteExercise_OnAction" text="Delete" />
+               </children></AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
